@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://8w6jevtg1t4j"]
 
-[ext_resource type="Script" uid="uid://cgp2tplqhu3v2" path="res://mob/mob.gd" id="1_mixeo"]
-[ext_resource type="Texture2D" uid="uid://dcyfm3vd7a8ex" path="res://mob/img/ars-temp3.png" id="1_pirjb"]
-[ext_resource type="Texture2D" uid="uid://cm8kjkx5aw7dd" path="res://mob/img/ars-temp.png" id="2_mixeo"]
-[ext_resource type="Texture2D" uid="uid://dbfyihyp0kbou" path="res://mob/img/ars-temp2.png" id="3_jkfaf"]
+[ext_resource type="Script" uid="uid://cgp2tplqhu3v2" path="res://vads_sex/mob/mob.gd" id="1_mixeo"]
+[ext_resource type="Texture2D" uid="uid://dcyfm3vd7a8ex" path="res://vads_sex/mob/img/ars-temp3.png" id="1_pirjb"]
+[ext_resource type="Texture2D" uid="uid://cm8kjkx5aw7dd" path="res://vads_sex/mob/img/ars-temp.png" id="2_mixeo"]
+[ext_resource type="Texture2D" uid="uid://dbfyihyp0kbou" path="res://vads_sex/mob/img/ars-temp2.png" id="3_jkfaf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vcc1q"]
 animations = [{

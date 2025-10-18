@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://btxy3nh7qif1c"]
 
-[ext_resource type="Script" uid="uid://bqispudanistv" path="res://player/player.gd" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://b7k1g03d1ew3x" path="res://player/img/vad-temp-2.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://c338a65js2boy" path="res://player/img/vad-temp.png" id="3_sweqy"]
+[ext_resource type="Script" uid="uid://bqispudanistv" path="res://vads_sex/player/player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://b7k1g03d1ew3x" path="res://vads_sex/player/img/vad-temp-2.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://c338a65js2boy" path="res://vads_sex/player/img/vad-temp.png" id="3_sweqy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
 animations = [{

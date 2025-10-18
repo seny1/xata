@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcyfm3vd7a8ex"
-path="res://.godot/imported/ars-temp3.png-723d4e0bc348303ddd86b9b0a511f615.ctex"
+uid="uid://dy5nvpvml7lxj"
+path="res://.godot/imported/главное меню.png-0c36728533f474714ec65f5e1d08ce7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mob/img/ars-temp3.png"
-dest_files=["res://.godot/imported/ars-temp3.png-723d4e0bc348303ddd86b9b0a511f615.ctex"]
+source_file="res://main_menu/img/главное меню.png"
+dest_files=["res://.godot/imported/главное меню.png-0c36728533f474714ec65f5e1d08ce7f.ctex"]
 
 [params]
 

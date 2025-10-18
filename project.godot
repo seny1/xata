@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="XataDev"
-run/main_scene="uid://3j2046f5i3ij"
+run/main_scene="uid://b7auhqvhqy55s"
 config/features=PackedStringArray("4.5", "Mobile")
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 

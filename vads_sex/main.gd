@@ -14,7 +14,6 @@ func _on_mob_mob_awake() -> void:
 func _on_mob_mob_sleeping() -> void:
 	player_caught = false
 	
-
 func _on_player_vad_is_fucking_now() -> void:
 	is_sexing = true
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqmsn04v6f7fe"
-path="res://.godot/imported/общая.png-bb7df32e8ab12e77b6f53a50d14456eb.ctex"
+uid="uid://c338a65js2boy"
+path="res://.godot/imported/vad-temp.png-2058460bf8289f224f0a16fff0382c64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/img/общая.png"
-dest_files=["res://.godot/imported/общая.png-bb7df32e8ab12e77b6f53a50d14456eb.ctex"]
+source_file="res://vads_sex/player/img/vad-temp.png"
+dest_files=["res://.godot/imported/vad-temp.png-2058460bf8289f224f0a16fff0382c64.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7k1g03d1ew3x"
-path="res://.godot/imported/vad-temp-2.png-a618733e42543e1094fedad434e93839.ctex"
+uid="uid://du35nk62o1erq"
+path="res://.godot/imported/кнопка play.png-53b688a0af0fd574d5dca59cb70b91a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/img/vad-temp-2.png"
-dest_files=["res://.godot/imported/vad-temp-2.png-a618733e42543e1094fedad434e93839.ctex"]
+source_file="res://main_menu/img/кнопка play.png"
+dest_files=["res://.godot/imported/кнопка play.png-53b688a0af0fd574d5dca59cb70b91a6.ctex"]
 
 [params]
 
