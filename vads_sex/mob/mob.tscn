@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://8w6jevtg1t4j"]
+[gd_scene load_steps=8 format=3 uid="uid://8w6jevtg1t4j"]
 
 [ext_resource type="Script" uid="uid://cgp2tplqhu3v2" path="res://vads_sex/mob/mob.gd" id="1_mixeo"]
-[ext_resource type="Texture2D" uid="uid://dcyfm3vd7a8ex" path="res://vads_sex/mob/img/ars-temp3.png" id="1_pirjb"]
-[ext_resource type="Texture2D" uid="uid://cm8kjkx5aw7dd" path="res://vads_sex/mob/img/ars-temp.png" id="2_mixeo"]
-[ext_resource type="Texture2D" uid="uid://dbfyihyp0kbou" path="res://vads_sex/mob/img/ars-temp2.png" id="3_jkfaf"]
+[ext_resource type="Texture2D" uid="uid://v8qi0ntk3mks" path="res://vads_sex/mob/img/ars1_awake.png" id="2_x2l8b"]
+[ext_resource type="Texture2D" uid="uid://bugd5whxwh400" path="res://vads_sex/mob/img/ars1_awake_game_over.png" id="3_33ykq"]
+[ext_resource type="Texture2D" uid="uid://dnp5grbwks3cd" path="res://vads_sex/mob/img/ars1_sleeping.png" id="3_821fj"]
+[ext_resource type="Texture2D" uid="uid://dx878gbpkldgb" path="res://vads_sex/mob/img/ars2_sleeping.png" id="4_33ykq"]
+[ext_resource type="Texture2D" uid="uid://bki8h4c4kmchn" path="res://vads_sex/mob/img/ars1_turning.png" id="5_ip8jk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vcc1q"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_pirjb")
+"texture": ExtResource("2_x2l8b")
 }],
 "loop": true,
 "name": &"awake",
@@ -17,7 +19,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_mixeo")
+"texture": ExtResource("3_33ykq")
+}],
+"loop": true,
+"name": &"game_over",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_821fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_33ykq")
 }],
 "loop": true,
 "name": &"sleep",
@@ -25,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_jkfaf")
+"texture": ExtResource("5_ip8jk")
 }],
 "loop": true,
 "name": &"turn",
@@ -36,8 +49,9 @@ animations = [{
 script = ExtResource("1_mixeo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(174, 153)
 sprite_frames = SubResource("SpriteFrames_vcc1q")
-animation = &"turn"
+animation = &"game_over"
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

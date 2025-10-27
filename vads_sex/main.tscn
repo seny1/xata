@@ -1,24 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://3j2046f5i3ij"]
+[gd_scene load_steps=7 format=3 uid="uid://3j2046f5i3ij"]
 
 [ext_resource type="Script" uid="uid://cn0ecqo1p8a0v" path="res://vads_sex/main.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://x73mnboe34s2" path="res://vads_sex/background/background.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://8w6jevtg1t4j" path="res://vads_sex/mob/mob.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://btxy3nh7qif1c" path="res://vads_sex/player/player.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://bjgshmubwws5h" path="res://vads_sex/hud/hud_vad_sex.tscn" id="5_vns8h"]
+[ext_resource type="AudioStream" uid="uid://c1qafr6sifdbv" path="res://music/vad_sex_back.ogg" id="6_b0lwx"]
 
-[node name="Node" type="Node"]
+[node name="Main" type="Node"]
 script = ExtResource("1_1bvp3")
 
 [node name="Background" parent="." instance=ExtResource("2_lquwl")]
 
 [node name="Mob" parent="." instance=ExtResource("3_7mycd")]
-position = Vector2(100, 102)
-scale = Vector2(0.4, 0.4)
+position = Vector2(328, 342)
 
 [node name="Player" parent="." instance=ExtResource("4_272bh")]
-position = Vector2(1821, 503)
-scale = Vector2(0.4, 0.4)
+position = Vector2(1456, 757)
 
+[node name="HUDVadSex" parent="." instance=ExtResource("5_vns8h")]
+
+[node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_b0lwx")
+volume_db = -10.0
+autoplay = true
+
+[node name="SurprisedPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+
+[connection signal="game_over" from="." to="HUDVadSex" method="_on_node_game_over"]
+[connection signal="score_changed" from="." to="HUDVadSex" method="_on_main_score_changed"]
 [connection signal="mob_awake" from="Mob" to="." method="_on_mob_mob_awake"]
 [connection signal="mob_sleeping" from="Mob" to="." method="_on_mob_mob_sleeping"]
 [connection signal="vad_is_fucking_now" from="Player" to="." method="_on_player_vad_is_fucking_now"]
 [connection signal="vad_stoped_his_sex" from="Player" to="." method="_on_player_vad_stoped_his_sex"]
+[connection signal="game_over_sig" from="HUDVadSex" to="." method="_on_hud_vad_sex_game_over_sig"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]

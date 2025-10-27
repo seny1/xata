@@ -1,8 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://x73mnboe34s2"]
 
-[ext_resource type="Texture2D" uid="uid://cqmsn04v6f7fe" path="res://vads_sex/background/img/общая.png" id="1_p8qmt"]
+[ext_resource type="Texture2D" uid="uid://brqtdi2hslq16" path="res://vads_sex/background/img/background.png" id="1_52vvl"]
 
 [node name="Background" type="Sprite2D"]
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_p8qmt")
+texture = ExtResource("1_52vvl")
 centered = false

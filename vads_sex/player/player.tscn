@@ -1,14 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://btxy3nh7qif1c"]
+[gd_scene load_steps=7 format=3 uid="uid://btxy3nh7qif1c"]
 
 [ext_resource type="Script" uid="uid://bqispudanistv" path="res://vads_sex/player/player.gd" id="1_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://b7k1g03d1ew3x" path="res://vads_sex/player/img/vad-temp-2.png" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://c338a65js2boy" path="res://vads_sex/player/img/vad-temp.png" id="3_sweqy"]
+[ext_resource type="Texture2D" uid="uid://dx6n4q08k70q6" path="res://vads_sex/player/img/an_vad1_fucking.png" id="2_vbnc4"]
+[ext_resource type="Texture2D" uid="uid://bfooohnni0s0o" path="res://vads_sex/player/img/an_vad2_fucking.png" id="3_eyu8s"]
+[ext_resource type="Texture2D" uid="uid://b6yhde6c83cui" path="res://vads_sex/player/img/an_vad1_sleeping.png" id="4_n8tlo"]
+[ext_resource type="Texture2D" uid="uid://d02mabeorkx6c" path="res://vads_sex/player/img/an_vad2_sleeping.png" id="5_cpg73"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_hqtel")
+"texture": ExtResource("2_vbnc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eyu8s")
 }],
 "loop": true,
 "name": &"fuck",
@@ -16,7 +21,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_sweqy")
+"texture": ExtResource("4_n8tlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cpg73")
 }],
 "loop": true,
 "name": &"idle",
@@ -29,3 +37,11 @@ script = ExtResource("1_i3pqv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"idle"
+frame_progress = 0.22716895
+
+[node name="MoanVad" type="AudioStreamPlayer" parent="."]
+volume_db = 5.0
+
+[node name="MoanAn" type="AudioStreamPlayer" parent="."]
+volume_db = 5.0
+pitch_scale = 1.2

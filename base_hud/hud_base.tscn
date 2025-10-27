@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdxa0nwbkfwu2"]
+
+[ext_resource type="Script" uid="uid://c2qosulgu8o1x" path="res://base_hud/hud_base.gd" id="1_my8sq"]
+[ext_resource type="Texture2D" uid="uid://dlwk14wjk1n70" path="res://base_hud/img/pause_button.png" id="2_kcmmj"]
+[ext_resource type="Texture2D" uid="uid://daa30ftsddvac" path="res://base_hud/img/paused.png" id="4_yt871"]
+[ext_resource type="AudioStream" uid="uid://6h6wcevv686e" path="res://music/click.ogg" id="5_kcmmj"]
+[ext_resource type="Texture2D" uid="uid://644c5wkiwvbt" path="res://base_hud/img/back_button.png" id="5_vip1g"]
+
+[node name="HUDBase" type="CanvasLayer"]
+script = ExtResource("1_my8sq")
+
+[node name="Paused" type="Sprite2D" parent="."]
+position = Vector2(988, 579)
+scale = Vector2(3.06, 3.65)
+texture = ExtResource("4_yt871")
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kcmmj")
+
+[node name="PauseButton" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 27.0
+offset_top = 19.0
+offset_right = 353.0
+offset_bottom = 363.0
+scale = Vector2(0.3, 0.3)
+focus_mode = 0
+texture_normal = ExtResource("2_kcmmj")
+
+[node name="BackButton" type="TextureButton" parent="."]
+process_mode = 3
+offset_left = 1785.0
+offset_top = 23.0
+offset_right = 2112.0
+offset_bottom = 369.0
+scale = Vector2(0.3, 0.3)
+focus_mode = 0
+texture_normal = ExtResource("5_vip1g")
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]

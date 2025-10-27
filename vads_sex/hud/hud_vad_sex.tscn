@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjgshmubwws5h"]
+
+[ext_resource type="PackedScene" uid="uid://bdxa0nwbkfwu2" path="res://base_hud/hud_base.tscn" id="1_wcjqo"]
+[ext_resource type="Script" uid="uid://bvj0a6nlmnj1n" path="res://vads_sex/hud/hud_vad_sex.gd" id="2_djcfk"]
+[ext_resource type="Texture2D" uid="uid://ukw60txb34fc" path="res://vads_sex/hud/img/game_over.png" id="2_wg7qu"]
+[ext_resource type="Texture2D" uid="uid://cntqv5im51e8s" path="res://vads_sex/hud/img/retry_button.png" id="4_spx31"]
+[ext_resource type="FontFile" uid="uid://c1pi6g2ug3mfw" path="res://fonts/Xolonium-Regular.ttf" id="5_c80dj"]
+[ext_resource type="AudioStream" uid="uid://d0byuxsc5f871" path="res://music/game-over.ogg" id="6_spx31"]
+
+[node name="HUD_Vad_sex" instance=ExtResource("1_wcjqo")]
+script = ExtResource("2_djcfk")
+
+[node name="Paused" parent="." index="0"]
+visible = false
+position = Vector2(1004, 585.00006)
+
+[node name="ClickPlayer" parent="." index="1"]
+process_mode = 3
+
+[node name="PauseButton" parent="." index="2"]
+offset_left = 58.0
+offset_top = 22.0
+offset_right = 384.0
+offset_bottom = 366.0
+
+[node name="GameOver" type="Sprite2D" parent="." index="3"]
+visible = false
+position = Vector2(987.25, 582.25)
+scale = Vector2(2.76875, 3.555)
+texture = ExtResource("2_wg7qu")
+
+[node name="RetryButton" type="TextureButton" parent="." index="4"]
+process_mode = 3
+offset_left = 905.0
+offset_top = 743.0
+offset_right = 1232.0
+offset_bottom = 1089.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_spx31")
+
+[node name="ScoreLabel" type="Label" parent="." index="5"]
+offset_right = 1920.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("5_c80dj")
+theme_override_font_sizes/font_size = 100
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverPlayer" type="AudioStreamPlayer" parent="." index="6"]
+process_mode = 3
+stream = ExtResource("6_spx31")
+volume_db = -5.0
+
+[node name="BackButton" parent="." index="7"]
+offset_left = 192.00012
+offset_top = 22.0
+offset_right = 519.0001
+offset_bottom = 368.0
+
+[connection signal="game_over_sig" from="." to="." method="_on_game_over_sig"]
+[connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
